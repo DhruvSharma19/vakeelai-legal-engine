@@ -1,0 +1,712 @@
+{
+  "DLST010047302024": {
+    "cnr_number": "DLST010047302024",
+    "case_details": {
+      "case_type": "CS (COMM) - CIVIL SUIT (COMMERCIAL)",
+      "filing_number": "2605/2024",
+      "filing_date": "09-05-2024",
+      "registration_number": "233/2024",
+      "registration_date": "10-05-2024",
+      "cnr_number": "DLST010047302024"
+    },
+    "case_status": {
+      "first_hearing_date": "10th May 2024",
+      "next_hearing_date": null,
+      "decision_date": "03rd June 2025",
+      "case_stage": null,
+      "nature_of_disposal": "Uncontested--DECREED",
+      "court_number_and_judge": "770-District Judge (Commercial Court) - 01",
+      "state": null,
+      "district": null,
+      "court_complex": null,
+      "court_establishment": null
+    },
+    "petitioners": [
+      {
+        "name": "Punjab National Bank",
+        "advocate": "DINANATH THAKUR",
+        "address": null,
+        "sequence": 1
+      }
+    ],
+    "respondents": [
+      {
+        "name": "Sunil Kumar",
+        "advocate": null,
+        "address": null,
+        "sequence": 1
+      }
+    ],
+    "acts": [
+      {
+        "act": "---",
+        "section": "6"
+      }
+    ],
+    "hearing_history": [
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "03-06-2025",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "22-05-2025",
+        "hearing_date": "03-06-2025",
+        "purpose": "Order (Civil)"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "09-04-2025",
+        "hearing_date": "22-05-2025",
+        "purpose": "Plaintiff/Petitioner Evidence"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "05-03-2025",
+        "hearing_date": "09-04-2025",
+        "purpose": "Misc. cases"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "29-01-2025",
+        "hearing_date": "05-03-2025",
+        "purpose": "Misc. cases"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "09-12-2024",
+        "hearing_date": "29-01-2025",
+        "purpose": "Misc. cases"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "25-10-2024",
+        "hearing_date": "25-10-2024",
+        "purpose": "Misc. cases"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "25-10-2024",
+        "hearing_date": "25-10-2024",
+        "purpose": "Restored"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "25-10-2024",
+        "hearing_date": "09-12-2024",
+        "purpose": "Misc. cases"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "03-10-2024",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "02-08-2024",
+        "hearing_date": "03-10-2024",
+        "purpose": "Misc./ Appearance (Civil)"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "17-05-2024",
+        "hearing_date": "02-08-2024",
+        "purpose": "Misc./ Appearance (Civil)"
+      },
+      {
+        "judge": "District Judge (Commercial Court) - 01",
+        "business_on_date": "10-05-2024",
+        "hearing_date": "17-05-2024",
+        "purpose": "Misc./ Appearance (Civil)"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "10-05-2024",
+        "order_details": "COPY OF ORDER",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=9SPa0Khvfj9E0G4c/QX3bIugRTTWXrmpHN3Q86yg7n8=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeF8rtzZprr5d9H8j6qqgLjOvheLGI/1FSvb3tMKG0sSZA",
+        "is_judgment": false
+      },
+      {
+        "order_number": "2",
+        "order_date": "17-05-2024",
+        "order_details": "COPY OF ORDER",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=9SPa0Khvfj9E0G4c/QX3bIugRTTWXrmpHN3Q86yg7n8=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeF39WssRsMC8hNlNIPOzj/zC8szvhr5kep1pI+DzcbdTF",
+        "is_judgment": false
+      },
+      {
+        "order_number": "3",
+        "order_date": "02-08-2024",
+        "order_details": "COPY OF JUDICIAL PROCEEDINGS",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=9SPa0Khvfj9E0G4c/QX3bIugRTTWXrmpHN3Q86yg7n8=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeFyiS28LWyTdhgL4j3J1hCkO9vkmIZ4hNAEq0Cq8hFO3u",
+        "is_judgment": false
+      },
+      {
+        "order_number": "4",
+        "order_date": "03-10-2024",
+        "order_details": "COPY OF JUDICIAL PROCEEDINGS",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=9SPa0Khvfj9E0G4c/QX3bIugRTTWXrmpHN3Q86yg7n8=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeF9KUqR7A879msMj2BpjkXM27bDTO5NCnR4EmBVDvCHWz",
+        "is_judgment": false
+      },
+      {
+        "order_number": "5",
+        "order_date": "09-12-2024",
+        "order_details": "COPY OF JUDICIAL PROCEEDINGS",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=9SPa0Khvfj9E0G4c/QX3bIugRTTWXrmpHN3Q86yg7n8=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeF7d9Sp+Dn09SU+XPV15n5PmazGi+rHsuDuqi6CuoEqtG",
+        "is_judgment": false
+      },
+      {
+        "order_number": "6",
+        "order_date": "05-03-2025",
+        "order_details": "COPY OF JUDICIAL PROCEEDINGS",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=9SPa0Khvfj9E0G4c/QX3bIugRTTWXrmpHN3Q86yg7n8=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeF3ELY1MxVGt1Ajy5vgfoBnk3Ch7t4ai8F5UEn3tO9nYs",
+        "is_judgment": false
+      },
+      {
+        "order_number": "7",
+        "order_date": "22-05-2025",
+        "order_details": "COPY OF JUDICIAL PROCEEDINGS",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=9SPa0Khvfj9E0G4c/QX3bIugRTTWXrmpHN3Q86yg7n8=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeFzxU2RGoKIUFyvhDrNyQqpv/OQtqCu8ljM3XmVF7l/q1",
+        "is_judgment": false
+      },
+      {
+        "order_number": "8",
+        "order_date": "03-06-2025",
+        "order_details": "COPY OF JUDICIAL PROCEEDINGS",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=CaTqT0661IojqLjWTTJB9fS/mT9zQ/i0ERuJAR1VKFU=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeF3YfQ6aP5peHendyYgd1FaTyv7/AlyVOn0l/h1syI9i0",
+        "is_judgment": true
+      },
+      {
+        "order_number": "9",
+        "order_date": "03-06-2025",
+        "order_details": "COPY OF JUDGMENT",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=CaTqT0661IojqLjWTTJB9fS/mT9zQ/i0ERuJAR1VKFU=&court_code=cl+sGJoSJ58oyVespa8VHg==&filename=LU07CPYto9jjJWJ/kaDeF0H0FNxbzT//6awwtYPzHRBe9d41dd3dRGnjx3hYSeAV",
+        "is_judgment": true
+      }
+    ],
+    "source": "mock_resilience",
+    "retrieved_at": "2026-10-28T19:35:37.340560Z"
+  },
+  "DLND020000602007": {
+    "cnr_number": "DLND020000602007",
+    "case_details": {
+      "case_type": "Cr Cases - CRIMINAL CASE",
+      "filing_number": "72464/2007",
+      "filing_date": "18-09-2007",
+      "registration_number": "39932/2016",
+      "registration_date": "18-09-2007",
+      "cnr_number": "DLND020000602007"
+    },
+    "case_status": {
+      "first_hearing_date": "25th February 2008",
+      "next_hearing_date": "17th February 2027",
+      "decision_date": null,
+      "case_stage": "Prosecution Evidence",
+      "nature_of_disposal": null,
+      "court_number_and_judge": "39-Judicial Magistrate First Class (Mahila Court-01)",
+      "state": null,
+      "district": null,
+      "court_complex": null,
+      "court_establishment": null
+    },
+    "petitioners": [
+      {
+        "name": "STATE",
+        "advocate": null,
+        "address": null,
+        "sequence": 1
+      }
+    ],
+    "respondents": [
+      {
+        "name": "MOHINDER PAL SINGH ETC (2)",
+        "advocate": null,
+        "address": null,
+        "sequence": 1
+      }
+    ],
+    "acts": [
+      {
+        "act": "IPC",
+        "section": null
+      }
+    ],
+    "hearing_history": [
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "27-10-2026",
+        "hearing_date": "17-02-2027",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "08-06-2026",
+        "hearing_date": "27-10-2026",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "19-02-2026",
+        "hearing_date": "08-06-2026",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "13-11-2025",
+        "hearing_date": "19-02-2026",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "04-09-2025",
+        "hearing_date": "13-11-2025",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "02-07-2025",
+        "hearing_date": "04-09-2025",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "05-02-2025",
+        "hearing_date": "02-07-2025",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "04-12-2024",
+        "hearing_date": "05-02-2025",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "19-09-2024",
+        "hearing_date": "04-12-2024",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "07-09-2024",
+        "hearing_date": "19-09-2024",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "05-07-2024",
+        "hearing_date": "07-09-2024",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "06-05-2024",
+        "hearing_date": "05-07-2024",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "13-03-2024",
+        "hearing_date": "06-05-2024",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "31-01-2024",
+        "hearing_date": "13-03-2024",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "29-11-2023",
+        "hearing_date": "31-01-2024",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "10-10-2023",
+        "hearing_date": "29-11-2023",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "12-09-2023",
+        "hearing_date": "10-10-2023",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "05-08-2023",
+        "hearing_date": "12-09-2023",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "17-07-2023",
+        "hearing_date": "05-08-2023",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "09-05-2023",
+        "hearing_date": "17-07-2023",
+        "purpose": "Order"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "01-04-2023",
+        "hearing_date": "09-05-2023",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "04-02-2023",
+        "hearing_date": "01-04-2023",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "13-01-2023",
+        "hearing_date": "04-02-2023",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "06-10-2022",
+        "hearing_date": "13-01-2023",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "Judicial Magistrate First Class (Mahila Court-01)",
+        "business_on_date": "27-07-2022",
+        "hearing_date": "06-10-2022",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "22-03-2022",
+        "hearing_date": "27-07-2022",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "26-11-2021",
+        "hearing_date": "22-03-2022",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "26-07-2021",
+        "hearing_date": "26-11-2021",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "25-03-2021",
+        "hearing_date": "26-07-2021",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "24-02-2021",
+        "hearing_date": "25-03-2021",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "23-01-2021",
+        "hearing_date": "24-02-2021",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "23-12-2020",
+        "hearing_date": "23-01-2021",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "22-12-2020",
+        "hearing_date": "23-12-2020",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "07-11-2020",
+        "hearing_date": "22-12-2020",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "15-10-2020",
+        "hearing_date": "15-10-2020",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "15-10-2020",
+        "hearing_date": "15-10-2020",
+        "purpose": "Restored"
+      },
+      {
+        "judge": "",
+        "business_on_date": "15-10-2020",
+        "hearing_date": "07-11-2020",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "02-08-2019",
+        "hearing_date": "",
+        "purpose": "Disposed"
+      },
+      {
+        "judge": "",
+        "business_on_date": "19-07-2019",
+        "hearing_date": "02-08-2019",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "",
+        "business_on_date": "25-05-2019",
+        "hearing_date": "19-07-2019",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "22-04-2019",
+        "hearing_date": "25-05-2019",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "27-11-2018",
+        "hearing_date": "22-04-2019",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "25-09-2018",
+        "hearing_date": "27-11-2018",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "13-07-2018",
+        "hearing_date": "25-09-2018",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "29-01-2018",
+        "hearing_date": "13-07-2018",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "15-01-2018",
+        "hearing_date": "29-01-2018",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "14-12-2017",
+        "hearing_date": "15-01-2018",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "04-12-2017",
+        "hearing_date": "14-12-2017",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "06-04-2017",
+        "hearing_date": "04-12-2017",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "24-09-2016",
+        "hearing_date": "06-04-2017",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "29-03-2016",
+        "hearing_date": "24-09-2016",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "18-03-2016",
+        "hearing_date": "29-03-2016",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "07-12-2015",
+        "hearing_date": "18-03-2016",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "30-04-2015",
+        "hearing_date": "07-12-2015",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "18-02-2015",
+        "hearing_date": "30-04-2015",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "07-11-2014",
+        "hearing_date": "18-02-2015",
+        "purpose": "Charge"
+      },
+      {
+        "judge": "",
+        "business_on_date": "16-05-2014",
+        "hearing_date": "07-11-2014",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "11-01-2013",
+        "hearing_date": "16-05-2014",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "12-12-2012",
+        "hearing_date": "11-01-2013",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "30-10-2012",
+        "hearing_date": "12-12-2012",
+        "purpose": "For Bail"
+      },
+      {
+        "judge": "",
+        "business_on_date": "10-10-2012",
+        "hearing_date": "30-10-2012",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "23-07-2012",
+        "hearing_date": "10-10-2012",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "27-04-2012",
+        "hearing_date": "23-07-2012",
+        "purpose": "Arguments"
+      },
+      {
+        "judge": "",
+        "business_on_date": "17-03-2012",
+        "hearing_date": "27-04-2012",
+        "purpose": "Arguments"
+      },
+      {
+        "judge": "",
+        "business_on_date": "25-01-2012",
+        "hearing_date": "17-03-2012",
+        "purpose": "Arguments"
+      },
+      {
+        "judge": "",
+        "business_on_date": "01-11-2011",
+        "hearing_date": "25-01-2012",
+        "purpose": "Arguments"
+      },
+      {
+        "judge": "",
+        "business_on_date": "07-07-2011",
+        "hearing_date": "01-11-2011",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "29-04-2011",
+        "hearing_date": "07-07-2011",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "24-02-2011",
+        "hearing_date": "29-04-2011",
+        "purpose": "Prosecution Evidence"
+      },
+      {
+        "judge": "",
+        "business_on_date": "04-11-2008",
+        "hearing_date": "24-02-2011",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "10-07-2008",
+        "hearing_date": "04-11-2008",
+        "purpose": "Misc./ Appearance"
+      },
+      {
+        "judge": "",
+        "business_on_date": "25-02-2008",
+        "hearing_date": "10-07-2008",
+        "purpose": "Misc./ Appearance"
+      }
+    ],
+    "orders": [
+      {
+        "order_number": "1",
+        "order_date": "24-09-2016",
+        "order_details": "COPY OF ORDER",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=Erc7OiK6KSbmAy/y5yrC9+8LprZEKmnHRA/kjIiUiF4=&court_code=1Wa2LjH5w7zcPVzbT+mRgw==&filename=XWOajM3azYauCYuHAvrBwhZkiYFNWIj1/hbGfhB7n5JfPmafEl4Jfmjks80awLXU",
+        "is_judgment": false
+      },
+      {
+        "order_number": "2",
+        "order_date": "06-04-2017",
+        "order_details": "COPY OF ORDER",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=Erc7OiK6KSbmAy/y5yrC9+8LprZEKmnHRA/kjIiUiF4=&court_code=1Wa2LjH5w7zcPVzbT+mRgw==&filename=XWOajM3azYauCYuHAvrBwu4EyzBFU+0j/QMzHEFXjG55de6BTq1vVjdbxNvhbuXC",
+        "is_judgment": false
+      },
+      {
+        "order_number": "3",
+        "order_date": "04-12-2017",
+        "order_details": "COPY OF JUDICIAL PROCEEDINGS",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=Erc7OiK6KSbmAy/y5yrC9+8LprZEKmnHRA/kjIiUiF4=&court_code=1Wa2LjH5w7zcPVzbT+mRgw==&filename=XWOajM3azYauCYuHAvrBwrlW7h08d2R065zqBjskgtA3QTIr5y4fNC9iuWgrTo6m",
+        "is_judgment": false
+      },
+      {
+        "order_number": "4",
+        "order_date": "15-01-2018",
+        "order_details": "COPY OF JUDICIAL PROCEEDINGS",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=Erc7OiK6KSbmAy/y5yrC9+8LprZEKmnHRA/kjIiUiF4=&court_code=1Wa2LjH5w7zcPVzbT+mRgw==&filename=XWOajM3azYauCYuHAvrBwuORb+/L+MPPl6YLixGFAFPn8lVQH2xf3N2fzJ5f1T//",
+        "is_judgment": false
+      },
+      {
+        "order_number": "5",
+        "order_date": "13-07-2018",
+        "order_details": "COPY OF ORDER",
+        "pdf_url": "/api/case/pdf?normal_v=cl+sGJoSJ58oyVespa8VHg==&case_val=Erc7OiK6KSbmAy/y5yrC9+8LprZEKmnHRA/kjIiUiF4=&court_code=1Wa2LjH5w7zcPVzbT+mRgw==&filename=XWOajM3azYauCYuHAvrBwquOkRdYHM9A8vIPzhl2yIZUsUChRpLAgIw9plkGcNJz",
+        "is_judgment": false
+      }
+    ],
+    "source": "mock_resilience",
+    "retrieved_at": "2026-10-28T19:35:37.358613Z"
+  }
+}
