@@ -47,13 +47,14 @@ st.markdown(
         color: #64748b;
         margin-bottom: 1.5rem;
     }
-    .badge-task {
-        background-color: #e0f2fe;
-        color: #0369a1;
+    .badge-pill {
+        background-color: #f1f5f9;
+        color: #0f172a;
         padding: 0.2rem 0.6rem;
-        border-radius: 6px;
-        font-weight: 700;
-        font-size: 0.8rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 0.75rem;
+        border: 1px solid #e2e8f0;
     }
     .legal-box {
         background: #ffffff;
@@ -100,7 +101,7 @@ scraper = DistrictCourtScraper(timeout=12)
 if app_mode == "⚖️ eCourts Case Scraper":
     st.markdown('<div class="main-header">District Court Case Scraper</div>', unsafe_allow_html=True)
     st.markdown(
-        '<div class="sub-header"><span class="badge-task">eCourts Engine</span> '
+        '<div class="sub-header"><span class="badge-pill">eCourts Engine</span> '
         'Programmatic network flow reproduction against <code>services.ecourts.gov.in</code> with dynamic rotating header decryption.</div>',
         unsafe_allow_html=True,
     )
@@ -255,7 +256,7 @@ if app_mode == "⚖️ eCourts Case Scraper":
 elif app_mode == "📝 Legal Draft Studio":
     st.markdown('<div class="main-header">Legal Draft Template Generator</div>', unsafe_allow_html=True)
     st.markdown(
-        '<div class="sub-header"><span class="badge-task">Drafting Studio</span> '
+        '<div class="sub-header"><span class="badge-pill">Drafting Studio</span> '
         'Pure-Python Rule-Based Legal Document Assembler • <strong>Zero LLMs • Zero External APIs</strong>.</div>',
         unsafe_allow_html=True,
     )

@@ -1,7 +1,10 @@
 # VakeelAI – eCourts District Court Scraper & Pure-Python Legal Drafting Engine
 
+[![React](https://img.shields.io/badge/Frontend-React%2018%20%2B%20Vite-61DAFB?style=flat&logo=react)](https://react.dev)
+[![TailwindCSS](https://img.shields.io/badge/UI-Shadcn%20%2F%20Tailwind-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com)
+[![Framer Motion](https://img.shields.io/badge/Animations-Framer%20Motion-0055FF?style=flat&logo=framer)](https://www.framer.com/motion/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com)
-[![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?style=flat&logo=streamlit)](https://streamlit.io)
+[![Streamlit](https://img.shields.io/badge/Cloud-Streamlit-FF4B4B?style=flat&logo=streamlit)](https://streamlit.io)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python)](https://python.org)
 [![Tests](https://img.shields.io/badge/Tests-17%20Passed-brightgreen?style=flat&logo=pytest)](https://docs.pytest.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -20,7 +23,7 @@ A complete, production-grade legal intelligence and drafting platform encompassi
    * Multi-format exports: Microsoft Word (`.docx` with 1.5-inch court binding margins), Markdown, Printable HTML, and JSON.
    * **Cross-Task Synergy Bridge:** One-click prefill from scraped eCourts cases into legal drafts.
 3. **Dual Frontend Interfaces:**
-   * Modern **FastAPI + Responsive Web Dashboard** (Tailwind CSS, Lucide icons, Vanilla JS).
+   * Modern **Shadcn UI + Framer Motion SPA** (React 18, Vite, Tailwind CSS, Radix UI primitives, Lucide icons, Dark/Light modes, animated tab sliders, staggered entrance reveals).
    * **Streamlit Cloud Web App** (`streamlit_app.py`) for instantaneous 1-click cloud hosting.
 
 ---
@@ -239,12 +242,16 @@ The legal template generator operates **without LLMs or external APIs** using de
 
 | View | Description | Screenshot |
 | :--- | :--- | :--- |
-| **Portal Overview** | Unified responsive workspace with dual search & real-time metrics | ![Portal](tests/screenshots/01_homepage_initial.png) |
+| **Portal Overview** | Unified Shadcn UI workspace with dual search & real-time metrics | ![Portal](tests/screenshots/01_homepage_initial.png) |
 | **Case Intelligence** | Complete case details, filing dates, parties, and advocate roster | ![Case Result](tests/screenshots/02_case_results_cnr.png) |
 | **Hearing History** | Chronological hearing timeline with business recorded dates | ![Hearing Timeline](tests/screenshots/03_hearing_history.png) |
 | **Orders & Judgments** | Order modal with direct high-speed court PDF resolution | ![Orders](tests/screenshots/04_orders_judgments.png) |
 | **Cross-Task Bridge** | 1-Click pre-fill from scraped case directly into legal draft studio | ![Drafting Prefill](tests/screenshots/05_drafting_studio_prefilled.png) |
 | **Drafting Studio** | Pure-Python legal pleading generator with Statement of Truth & CPC averments | ![Draft Markdown](tests/screenshots/06_draft_markdown.png) |
+| **Schema JSON** | Complete validated AST and section metadata export | ![Schema JSON](tests/screenshots/07_draft_json.png) |
+| **Architecture** | Reverse-engineering insights and sequence flow documentation | ![Architecture](tests/screenshots/08_architecture_tab.png) |
+| **Hierarchy Search** | Cascading search by State, District, Complex, Est, Case Type, Number & Year | ![Hierarchy Search](tests/screenshots/09_case_number_results.png) |
+| **Dark Mode** | Full dark theme with zinc/slate palette and smooth Framer Motion transitions | ![Dark Mode](tests/screenshots/10_dark_mode_showcase.png) |
 
 ---
 
