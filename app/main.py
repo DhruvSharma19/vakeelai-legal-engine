@@ -4,13 +4,12 @@ VakeelAI LegalTech Platform
 FastAPI Backend Application
 - District Court Case Scraper (eCourts portal reverse engineered)
 - Pure-Python Legal Draft Template Generator (Deterministic Rule-Based Engine)
-- Integrated Legal Engineering Dashboard
+- Modern React + Shadcn UI + Framer Motion Dashboard
 """
 
 from pathlib import Path
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -37,7 +36,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount static directories
+# Mount static production bundle
 static_dir = BASE_DIR / "static"
 static_dir.mkdir(parents=True, exist_ok=True)
 app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
@@ -47,22 +46,16 @@ dist_assets = dist_dir / "assets"
 if dist_assets.exists():
     app.mount("/assets", StaticFiles(directory=str(dist_assets)), name="assets")
 
-templates_dir = BASE_DIR / "templates"
-templates_dir.mkdir(parents=True, exist_ok=True)
-templates = Jinja2Templates(directory=str(templates_dir))
-
 # Include API Routers
 app.include_router(scraper_router)
 app.include_router(drafting_router)
 
 
 @app.get("/")
-def index(request: Request):
-    """Renders the main single-page web dashboard."""
+def index():
+    """Renders the single-page application entrypoint."""
     dist_index = dist_dir / "index.html"
-    if dist_index.exists():
-        return FileResponse(str(dist_index))
-    return templates.TemplateResponse(request=request, name="index.html")
+    return FileResponse(str(dist_index))
 
 
 @app.get("/health")

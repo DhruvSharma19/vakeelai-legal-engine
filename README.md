@@ -199,16 +199,26 @@ The legal template generator operates **without LLMs or external APIs** using de
 ## Repository Structure
 
 ```text
+├── frontend/                      # Modern React 18 + TypeScript + Vite SPA
+│   ├── src/
+│   │   ├── components/            # UI components (CNRSearch, CaseView, DraftingStudio, etc.)
+│   │   ├── components/ui/         # Shadcn UI primitives (Button, Card, Tabs, Dialog, Badge, Input)
+│   │   ├── lib/                   # Utility helpers (cn, formatINR)
+│   │   ├── types.ts               # TypeScript data models matching backend schemas
+│   │   ├── App.tsx                # Main SPA application with Framer Motion layout
+│   │   ├── main.tsx               # React application entrypoint
+│   │   └── index.css              # Tailored Shadcn UI design tokens & typography
+│   ├── package.json               # NPM dependencies & build scripts
+│   ├── tailwind.config.js         # Tailwind CSS configuration with zinc legal palette
+│   ├── tsconfig.json              # TypeScript configuration
+│   └── vite.config.ts             # Vite build configuration (outputs to app/static/dist)
 ├── app/
-│   ├── main.py                     # FastAPI application entrypoint
+│   ├── main.py                    # FastAPI application entrypoint
 │   ├── api/
 │   │   ├── routes_scraper.py      # Endpoints for captcha, cascade, CNR, case search
 │   │   └── routes_drafting.py     # Endpoints for templates, generation, docx export
-│   ├── static/
-│   │   ├── css/style.css          # Typographic styling & print styles
-│   │   └── js/app.js              # Frontend interactive application logic
-│   └── templates/
-│       └── index.html             # Sleek modern dashboard (Tailwind + Lucide)
+│   └── static/
+│       └── dist/                  # Pre-compiled production React bundle (assets, index.html)
 ├── core/
 │   ├── ecourts/
 │   │   ├── client.py              # Low-level HTTP session & dynamic header/token manager
@@ -224,16 +234,19 @@ The legal template generator operates **without LLMs or external APIs** using de
 │       ├── num_to_words.py        # Indian currency & numbers to words converter
 │       └── templates/             # Specialized rule-based legal templates
 ├── tests/
+│   ├── capture_visuals.py         # Playwright visual regression suite
+│   ├── screenshots/               # Verified UI screenshots
 │   ├── test_scraper.py            # Unit tests for scraper & parser
 │   ├── test_drafting.py           # Unit tests for legal draft engine
 │   └── test_api.py                # Integration tests for FastAPI endpoints
 ├── streamlit_app.py               # Complete Streamlit cloud application
 ├── run.py                         # Local server runner script
-├── requirements.txt               # Project dependencies
+├── requirements.txt               # Python project dependencies
+├── pytest.ini                     # Pytest configuration
 ├── Dockerfile                     # Production container configuration
 ├── render.yaml                    # One-click Render cloud deployment blueprint
 ├── Procfile                       # Process configuration
-└── README.md                      # Documentation
+└── README.md                      # Platform documentation
 ```
 
 ---
