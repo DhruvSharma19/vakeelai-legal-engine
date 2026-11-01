@@ -110,8 +110,8 @@ The eCourts District Court portal (`services.ecourts.gov.in/ecourtindia_v6`) use
 
 ### 1. Clone & Install Dependencies
 ```bash
-git clone https://github.com/<your-username>/vakeelai-ecourts.git
-cd vakeelai-ecourts
+git clone https://github.com/DhruvSharma19/vakeelai-legal-engine.git
+cd vakeelai-legal-engine
 
 # Create virtual environment
 python3 -m venv venv
@@ -140,7 +140,7 @@ Open **[http://localhost:8501](http://localhost:8501)**.
 ```bash
 pytest tests/ -v
 ```
-All 11 unit tests covering parsing, captcha, data models, template generation, docx exports, and cross-task bridges run in < 1 second.
+All 17 automated tests covering HTTP session handling, HTML table parsing, captcha solving, data models, template generation, docx exports, and cross-task bridges run in < 4 seconds.
 
 ---
 
@@ -235,6 +235,23 @@ The legal template generator operates **without LLMs or external APIs** using de
 
 ---
 
+## 📸 Platform Interface Showcase
+
+| View | Description | Screenshot |
+| :--- | :--- | :--- |
+| **Portal Overview** | Unified responsive workspace with dual search & real-time metrics | ![Portal](tests/screenshots/01_homepage_initial.png) |
+| **Case Intelligence** | Complete case details, filing dates, parties, and advocate roster | ![Case Result](tests/screenshots/02_case_results_cnr.png) |
+| **Hearing History** | Chronological hearing timeline with business recorded dates | ![Hearing Timeline](tests/screenshots/03_hearing_history.png) |
+| **Orders & Judgments** | Order modal with direct high-speed court PDF resolution | ![Orders](tests/screenshots/04_orders_judgments.png) |
+| **Cross-Task Bridge** | 1-Click pre-fill from scraped case directly into legal draft studio | ![Drafting Prefill](tests/screenshots/05_drafting_studio_prefilled.png) |
+| **Drafting Studio** | Pure-Python legal pleading generator with Statement of Truth & CPC averments | ![Draft Markdown](tests/screenshots/06_draft_markdown.png) |
+
+---
+
 ## 👨‍💻 Author
-Engineered with precision for **VakeelAI**.
+
+**Dhruv Sharma**  
+- **Email:** [dhruvamsh@gmail.com](mailto:dhruvamsh@gmail.com)  
+- **GitHub:** [@DhruvSharma19](https://github.com/DhruvSharma19)  
+- Engineered with precision for **VakeelAI**.
 
