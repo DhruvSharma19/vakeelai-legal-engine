@@ -31,3 +31,5 @@ node_modules/
 frontend/dist/
 !app/static/dist/
 !frontend/src/lib/
+.vercel
+.env*.local

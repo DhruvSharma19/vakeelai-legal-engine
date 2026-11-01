@@ -8,6 +8,9 @@
 [![Tests](https://img.shields.io/badge/Tests-17%20Passed-brightgreen?style=flat&logo=pytest)](https://docs.pytest.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+> **Live Production URL:** [https://vakeelai-legal-engine.vercel.app](https://vakeelai-legal-engine.vercel.app)  
+> **Interactive API Docs (Swagger UI):** [https://vakeelai-legal-engine.vercel.app/docs](https://vakeelai-legal-engine.vercel.app/docs)
+
 A complete, production-grade legal intelligence and drafting platform encompassing:
 1. **District Court Case Scraper** (`services.ecourts.gov.in`)
    * Programmatic browser network flow replication.
@@ -186,6 +189,9 @@ The legal template generator operates **without LLMs or external APIs** using de
 ## Repository Structure
 
 ```text
+├── api/
+│   └── index.py                   # Vercel Serverless Function entrypoint
+├── public/                        # Static assets served directly via Vercel Edge CDN
 ├── frontend/                      # Modern React 18 + TypeScript + Vite SPA
 │   ├── src/
 │   │   ├── components/            # UI components (CNRSearch, CaseView, DraftingStudio, etc.)
@@ -229,6 +235,7 @@ The legal template generator operates **without LLMs or external APIs** using de
 ├── pytest.ini                     # Pytest configuration
 ├── Dockerfile                     # Production container configuration
 ├── render.yaml                    # One-click Render cloud deployment blueprint
+├── vercel.json                    # Vercel cloud deployment configuration
 ├── Procfile                       # Process configuration
 └── README.md                      # Platform documentation
 ```
