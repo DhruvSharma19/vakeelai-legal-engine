@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Scale, Activity, Moon, Sun, ShieldCheck, Github } from "lucide-react";
+import { Scale, Moon, Sun, Github, Building2, FileSignature, Cpu } from "lucide-react";
 import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
 
@@ -36,9 +36,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
   }, []);
 
   const navItems = [
-    { id: "scraper", label: "eCourts Scraper", icon: "🏛️" },
-    { id: "drafting", label: "Legal Drafting Studio", icon: "⚖️" },
-    { id: "architecture", label: "System Architecture", icon: "⚡" },
+    { id: "scraper", label: "eCourts Scraper", icon: Building2 },
+    { id: "drafting", label: "Legal Drafting Studio", icon: FileSignature },
+    { id: "architecture", label: "System Architecture", icon: Cpu },
   ];
 
   return (
@@ -68,6 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
         <nav className="flex items-center space-x-1 bg-zinc-100 dark:bg-zinc-900 p-1 rounded-xl border border-zinc-200/60 dark:border-zinc-800">
           {navItems.map((item) => {
             const isActive = activeTab === item.id;
+            const IconComponent = item.icon;
             return (
               <button
                 key={item.id}
@@ -85,7 +86,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
                     transition={{ type: "spring", stiffness: 450, damping: 35 }}
                   />
                 )}
-                <span className="relative z-10 text-xs sm:text-sm">{item.icon}</span>
+                <IconComponent className="relative z-10 h-3.5 w-3.5" />
                 <span className="relative z-10 hidden md:inline">{item.label}</span>
               </button>
             );

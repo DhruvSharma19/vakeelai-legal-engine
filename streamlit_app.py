@@ -27,7 +27,7 @@ from core.drafting.models import DraftInput, PartyInput, AdvocateInput, FactItem
 
 st.set_page_config(
     page_title="VakeelAI - eCourts Scraper & Legal Draft Generator",
-    page_icon="⚖️",
+    page_icon=None,
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -84,12 +84,12 @@ st.sidebar.markdown("---")
 
 app_mode = st.sidebar.radio(
     "Navigate to:",
-    ["⚖️ eCourts Case Scraper", "📝 Legal Draft Studio", "🏛️ System Architecture & Docs"],
+    ["eCourts Case Scraper", "Legal Draft Studio", "System Architecture & Docs"],
 )
 
 st.sidebar.markdown("---")
 st.sidebar.info(
-    "💡 **Resilience Built-in:** Includes live eCourts request flow reproduction with dynamic "
+    "**Resilience Built-in:** Includes live eCourts request flow reproduction with dynamic "
     "token/header parsing and an offline verified fallback dataset for cloud hosting reliability."
 )
 
@@ -98,7 +98,7 @@ scraper = DistrictCourtScraper(timeout=12)
 # ==========================================
 # 1. eCourts Case Scraper
 # ==========================================
-if app_mode == "⚖️ eCourts Case Scraper":
+if app_mode == "eCourts Case Scraper":
     st.markdown('<div class="main-header">District Court Case Scraper</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="sub-header"><span class="badge-pill">eCourts Engine</span> '
@@ -106,7 +106,7 @@ if app_mode == "⚖️ eCourts Case Scraper":
         unsafe_allow_html=True,
     )
 
-    search_tab1, search_tab2 = st.tabs(["🔍 Search by CNR Number", "🏛️ Search by Case Number"])
+    search_tab1, search_tab2 = st.tabs(["Search by CNR Number", "Search by Case Number"])
 
     # Search by CNR
     with search_tab1:
@@ -192,13 +192,13 @@ if app_mode == "⚖️ eCourts Case Scraper":
 
         col_title, col_actions = st.columns([3, 1])
         with col_title:
-            st.subheader(f"🏛️ {pet_name} Vs {resp_name}")
+            st.subheader(f"{pet_name} Vs {resp_name}")
             st.markdown(
                 f"**CNR:** `{case.cnr_number}` | **Reg No:** `{case.case_details.registration_number or 'N/A'}` | "
                 f"**Type:** `{case.case_details.case_type or 'Civil Suit'}` | **Source:** `{case.source}`"
             )
         with col_actions:
-            if st.button("📝 Pre-fill Legal Draft Studio"):
+            if st.button("Pre-fill Legal Draft Studio"):
                 st.session_state.draft_input_prefilled = LegalDraftingEngine.populate_from_case(case)
                 st.info("Draft pre-filled! Switch to the 'Legal Draft Studio' tab in the sidebar to review.")
 
@@ -210,7 +210,7 @@ if app_mode == "⚖️ eCourts Case Scraper":
         m4.metric("Disposal", case.case_status.nature_of_disposal or "Sub-Judice")
 
         # Detail Sub-tabs
-        dt1, dt2, dt3, dt4 = st.tabs(["👥 Parties & Advocates", "📋 Case Details & Acts", "⏳ Hearing History", "📜 Orders & Judgments"])
+        dt1, dt2, dt3, dt4 = st.tabs(["Parties & Advocates", "Case Details & Acts", "Hearing History", "Orders & Judgments"])
 
         with dt1:
             c_p, c_r = st.columns(2)
@@ -233,17 +233,17 @@ if app_mode == "⚖️ eCourts Case Scraper":
         with dt3:
             st.markdown(f"**Total Hearings: {len(case.hearing_history)}**")
             for h in case.hearing_history:
-                st.markdown(f"📅 **{h.hearing_date or 'N/A'}** — *{h.purpose or 'Judicial Business'}* | Judge: {h.judge or 'Presiding Judge'}")
+                st.markdown(f"**{h.hearing_date or 'N/A'}** — *{h.purpose or 'Judicial Business'}* | Judge: {h.judge or 'Presiding Judge'}")
 
         with dt4:
             st.markdown(f"**Total Orders: {len(case.orders)}**")
             for o in case.orders:
-                st.markdown(f"📄 **Order #{o.order_number or '1'}** ({o.order_date}) - {o.order_details}")
+                st.markdown(f"**Order #{o.order_number or '1'}** ({o.order_date}) - {o.order_details}")
                 if o.pdf_url:
-                    st.markdown(f"[🔗 View / Download Order Document]({o.pdf_url})")
+                    st.markdown(f"[View / Download Order Document]({o.pdf_url})")
 
         st.download_button(
-            "📥 Download Full Case JSON",
+            "Download Full Case JSON",
             data=json.dumps(case.model_dump(), indent=2),
             file_name=f"case_{case.cnr_number}.json",
             mime="application/json",
@@ -253,7 +253,7 @@ if app_mode == "⚖️ eCourts Case Scraper":
 # ==========================================
 # 2. Legal Draft Studio
 # ==========================================
-elif app_mode == "📝 Legal Draft Studio":
+elif app_mode == "Legal Draft Studio":
     st.markdown('<div class="main-header">Legal Draft Template Generator</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="sub-header"><span class="badge-pill">Drafting Studio</span> '
@@ -331,7 +331,7 @@ elif app_mode == "📝 Legal Draft Studio":
         st.subheader("Document Preview")
         output = LegalDraftingEngine.generate_draft(draft_input)
 
-        p_tab1, p_tab2, p_tab3 = st.tabs(["📄 Formatted Legal View", "📝 Markdown", "📊 JSON Structure"])
+        p_tab1, p_tab2, p_tab3 = st.tabs(["Formatted Legal View", "Markdown", "JSON Structure"])
 
         with p_tab1:
             st.markdown(f'<div class="legal-box">{output.html}</div>', unsafe_allow_html=True)
@@ -346,7 +346,7 @@ elif app_mode == "📝 Legal Draft Studio":
         # Export Actions
         docx_data = LegalDraftingEngine.export_to_docx(output)
         st.download_button(
-            "📥 Download Microsoft Word (.docx)",
+            "Download Microsoft Word (.docx)",
             data=docx_data,
             file_name=f"{chosen_tid}_{suit_no.replace(' ', '_')}.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -356,7 +356,7 @@ elif app_mode == "📝 Legal Draft Studio":
 # ==========================================
 # 3. System Architecture & Docs
 # ==========================================
-elif app_mode == "🏛️ System Architecture & Docs":
+elif app_mode == "System Architecture & Docs":
     st.markdown('<div class="main-header">System Architecture & Technical Choices</div>', unsafe_allow_html=True)
     st.markdown(
         '<div class="sub-header">Explanation of network flow reverse engineering, delimiter decoding, and deterministic drafting engine.</div>',
@@ -365,7 +365,7 @@ elif app_mode == "🏛️ System Architecture & Docs":
 
     st.markdown(
         """
-        ### 🔍 eCourts Network Flow Reproduction
+        ### eCourts Network Flow Reproduction
         1. **Session & Cookie Persistence:** Handles `SERVICES_SESSID` and `JSESSION` cookies automatically across requests.
         2. **Dynamic Delimiter & Rotating Header:** eCourts dynamically encrypts requests using a rotating JS delimiter inside `components.js?v=...` and injects a dynamic header name (e.g. `Biure465: delimeter`). Our client dynamically fetches and extracts these tokens on startup.
         3. **Synchronized `app_token`:** Reads the 64-character SHA256 DOM token and updates it from AJAX delimiter responses (`#####<token>#####`).
@@ -374,7 +374,7 @@ elif app_mode == "🏛️ System Architecture & Docs":
 
         ---
 
-        ### 📝 Pure-Python Legal Template Generator
+        ### Pure-Python Legal Template Generator
         1. **Strictly Non-LLM:** Deterministic rule-based template generation ensuring zero external API dependencies.
         2. **Indian Legal Conventions:** Formats Court headers, memo of parties, numbered averments, Section 12A commercial mediation compliance, verification, and Statement of Truth under Order VI Rule 15A CPC.
         3. **Indian Currency Engine:** Custom converter transforms numbers into standard words (e.g., `Rs. 24,50,000/- (Rupees Twenty-Four Lakh Fifty Thousand Only)`).

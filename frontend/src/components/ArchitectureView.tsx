@@ -144,3 +144,4 @@ export const ArchitectureView: React.FC = () => {
     </div>
   );
 };
+

@@ -464,3 +464,4 @@ export const CaseView: React.FC<CaseViewProps> = ({ caseData, onPrefillDraft }) 
     </motion.div>
   );
 };
+

@@ -15,3 +15,4 @@ export function formatINR(val?: number | string | null): string {
     maximumFractionDigits: 0,
   }).format(num);
 }
+

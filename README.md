@@ -28,7 +28,7 @@ A complete, production-grade legal intelligence and drafting platform encompassi
 
 ---
 
-## 🏛️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
@@ -75,7 +75,7 @@ flowchart TD
 
 ---
 
-## 🔬 Reverse-Engineering eCourts: Technical Insights
+## Reverse-Engineering eCourts: Technical Insights
 
 The eCourts District Court portal (`services.ecourts.gov.in/ecourtindia_v6`) uses several client-side security mechanisms. Rather than relying on fragile browser automation (e.g. Selenium/Playwright clicking), this scraper **reproduces the exact network protocol in pure Python**:
 
@@ -109,7 +109,7 @@ The eCourts District Court portal (`services.ecourts.gov.in/ecourtindia_v6`) use
 
 ---
 
-## ⚡ Quickstart & Local Setup
+## Quickstart & Local Setup
 
 ### 1. Clone & Install Dependencies
 ```bash
@@ -147,7 +147,7 @@ All 17 automated tests covering HTTP session handling, HTML table parsing, captc
 
 ---
 
-## 🌐 Live Cloud Deployment
+## Live Cloud Deployment
 
 ### Option A: Streamlit Community Cloud (Recommended - Free & 1-Minute Setup)
 1. Push this repository to a public GitHub repo.
@@ -167,17 +167,17 @@ docker run -p 8000:8000 vakeelai-app
 
 ---
 
-## 📋 Verified Test Cases & Benchmark Results
+## Verified Test Cases & Benchmark Results
 
 | Test Case | Search Method | Input Parameters | Expected Result | Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **Case 1** | **Case Number** | State: **Delhi (26)**<br>District: **South (10)**<br>Complex: **Saket Court Complex**<br>Est: **Dist & Sessions Judge, South, Saket**<br>Type: **CS (COMM)**<br>Number: **233**<br>Year: **2024** | **Punjab National Bank Vs Sunil Kumar**<br>CNR: `DLST010047302024`<br>Status: Decreed<br>Orders: 9 records with PDF links | ✅ Verified Live |
-| **Case 2** | **CNR Number** | CNR: `DLST010047302024` | **Punjab National Bank Vs Sunil Kumar** (Commercial Civil Suit) | ✅ Verified Live |
-| **Case 3** | **CNR Number** | CNR: `DLND020000602007` | **Criminal Case**, Patiala House Courts (Chief Metropolitan Magistrate, New Delhi) | ✅ Verified Live |
+| **Case 1** | **Case Number** | State: **Delhi (26)**<br>District: **South (10)**<br>Complex: **Saket Court Complex**<br>Est: **Dist & Sessions Judge, South, Saket**<br>Type: **CS (COMM)**<br>Number: **233**<br>Year: **2024** | **Punjab National Bank Vs Sunil Kumar**<br>CNR: `DLST010047302024`<br>Status: Decreed<br>Orders: 9 records with PDF links | Verified Live |
+| **Case 2** | **CNR Number** | CNR: `DLST010047302024` | **Punjab National Bank Vs Sunil Kumar** (Commercial Civil Suit) | Verified Live |
+| **Case 3** | **CNR Number** | CNR: `DLND020000602007` | **Criminal Case**, Patiala House Courts (Chief Metropolitan Magistrate, New Delhi) | Verified Live |
 
 ---
 
-## ⚖️ Pure-Python Legal Templates Catalog
+## Pure-Python Legal Templates Catalog
 
 The legal template generator operates **without LLMs or external APIs** using deterministic rule-based models and legal conventions:
 
@@ -196,7 +196,7 @@ The legal template generator operates **without LLMs or external APIs** using de
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ├── app/
@@ -238,7 +238,7 @@ The legal template generator operates **without LLMs or external APIs** using de
 
 ---
 
-## 📸 Platform Interface Showcase
+## Platform Interface Showcase
 
 | View | Description | Screenshot |
 | :--- | :--- | :--- |
@@ -255,7 +255,7 @@ The legal template generator operates **without LLMs or external APIs** using de
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Dhruv Sharma**  
 - **Email:** [dhruvamsh@gmail.com](mailto:dhruvamsh@gmail.com)  
