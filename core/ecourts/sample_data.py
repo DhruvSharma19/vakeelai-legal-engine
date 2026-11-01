@@ -9,7 +9,7 @@ Resilience Architecture:
 ------------------------
 The eCourts services portal (services.ecourts.gov.in) runs on National Informatics Centre (NIC) infrastructure.
 Government network gateways and Web Application Firewalls (WAF) frequently enforce strict geographic and rate-limiting
-policies on international cloud hosting IP blocks (AWS, Render, Streamlit Cloud, GCP).
+policies on international cloud hosting IP blocks (AWS, Render, Railway, GCP).
 To guarantee 99.9% application uptime during portal maintenance windows or external gateway latency spikes,
 the client automatically attempts a live portal handshake first, and utilizes validated structural fallbacks
 if upstream government gateway connectivity is restricted or interrupted.

@@ -6,7 +6,7 @@ Provides clean Python interfaces for:
 1. Searching by CNR Number (16 characters)
 2. Searching by Case Number & Court Hierarchy (State -> District -> Complex -> Est -> Type -> No -> Year)
 3. Captcha session lifecycle (image data, audio playback, auto-OCR solving)
-4. Offline resilience fallback for cloud deployments (guaranteeing 100% uptime on Render/Streamlit)
+4. Offline resilience fallback for cloud deployments (guaranteeing 100% uptime on Render/Railway)
 """
 
 import logging

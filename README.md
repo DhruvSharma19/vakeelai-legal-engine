@@ -4,7 +4,6 @@
 [![TailwindCSS](https://img.shields.io/badge/UI-Shadcn%20%2F%20Tailwind-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com)
 [![Framer Motion](https://img.shields.io/badge/Animations-Framer%20Motion-0055FF?style=flat&logo=framer)](https://www.framer.com/motion/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com)
-[![Streamlit](https://img.shields.io/badge/Cloud-Streamlit-FF4B4B?style=flat&logo=streamlit)](https://streamlit.io)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python)](https://python.org)
 [![Tests](https://img.shields.io/badge/Tests-17%20Passed-brightgreen?style=flat&logo=pytest)](https://docs.pytest.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -22,9 +21,8 @@ A complete, production-grade legal intelligence and drafting platform encompassi
    * Indian currency & number-to-words converter (`lakhs`, `crores`).
    * Multi-format exports: Microsoft Word (`.docx` with 1.5-inch court binding margins), Markdown, Printable HTML, and JSON.
    * **Cross-Task Synergy Bridge:** One-click prefill from scraped eCourts cases into legal drafts.
-3. **Dual Frontend Interfaces:**
-   * Modern **Shadcn UI + Framer Motion SPA** (React 18, Vite, Tailwind CSS, Radix UI primitives, Lucide icons, Dark/Light modes, animated tab sliders, staggered entrance reveals).
-   * **Streamlit Cloud Web App** (`streamlit_app.py`) for instantaneous 1-click cloud hosting.
+3. **Modern SPA Interface:**
+   * Built with **React 18, Vite, Shadcn UI, and Framer Motion** (Tailwind CSS, Radix UI primitives, Lucide icons, Dark/Light modes, animated tab slider, staggered entrance reveals).
 
 ---
 
@@ -32,9 +30,8 @@ A complete, production-grade legal intelligence and drafting platform encompassi
 
 ```mermaid
 flowchart TD
-    subgraph UI ["Frontend Interfaces"]
-        A1["FastAPI SPA (Tailwind + Vanilla JS)"]
-        A2["Streamlit Cloud App (streamlit_app.py)"]
+    subgraph UI ["Frontend Interface"]
+        A1["React SPA (Shadcn UI + Framer Motion)"]
     end
 
     subgraph API ["FastAPI Backend Layer (app/)"]
@@ -64,10 +61,9 @@ flowchart TD
     end
 
     A1 --> B1 & B2 & B3 & B4 & B5 & B6
-    A2 --> CoreScraper & CoreDrafting
     B1 & B2 & B3 --> CoreScraper
     B4 & B5 & B6 --> CoreDrafting
-    C1 <-->|"HTTP/2 Handshake & AJAX"| E1
+    C1 <-->|"HTTP Handshake & AJAX"| E1
     C1 --> C2
     C1 --> C3
     CoreScraper -.->|"Auto-Prefill Bridge"| CoreDrafting
@@ -104,7 +100,7 @@ The eCourts District Court portal (`services.ecourts.gov.in/ecourtindia_v6`) use
 * The frontend still provides complete control: users can view the live image, listen to the audio captcha, refresh, or enter the code manually.
 
 ### 4. Cloud Deployment Resilience (NIC WAF Geo-blocking)
-* The National Informatics Centre (NIC) firewall frequently blocks or throttles outbound traffic from foreign cloud datacenters (Render, Railway, AWS US-East, Streamlit Cloud).
+* The National Informatics Centre (NIC) firewall frequently blocks or throttles outbound traffic from foreign cloud datacenters (Render, Railway, AWS US-East).
 * **Resilience Architecture:** The scraper always queries live eCourts first. If the remote NIC server times out, returns HTTP 403 Forbidden, or undergoes government maintenance, the system seamlessly activates a verified genuine fallback snapshot for reference cases (`Saket Court CS (COMM) 233/2024` and `DLND020000602007`). This guarantees 100% uptime and resilience.
 
 ---
@@ -124,22 +120,16 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 2. Run the FastAPI Web Application
+### 2. Run the Application Server
 ```bash
 python run.py
 # Or directly with uvicorn:
 uvicorn app.main:app --reload --port 8000
 ```
-Open **[http://localhost:8000](http://localhost:8000)** in your browser.
+Open **[http://localhost:8000](http://localhost:8000)** in your browser.  
 Open **[http://localhost:8000/docs](http://localhost:8000/docs)** for interactive Swagger OpenAPI documentation.
 
-### 3. Run the Streamlit Application (Alternative UI)
-```bash
-streamlit run streamlit_app.py
-```
-Open **[http://localhost:8501](http://localhost:8501)**.
-
-### 4. Run Automated Tests
+### 3. Run Automated Tests
 ```bash
 pytest tests/ -v
 ```
@@ -149,15 +139,14 @@ All 17 automated tests covering HTTP session handling, HTML table parsing, captc
 
 ## Live Cloud Deployment
 
-### Option A: Streamlit Community Cloud (Recommended - Free & 1-Minute Setup)
-1. Push this repository to a public GitHub repo.
-2. Visit **[share.streamlit.io](https://share.streamlit.io)** and log in with GitHub.
-3. Click **"New App"**, select this repository, set `streamlit_app.py` as the main file path, and click **Deploy**!
-
-### Option B: Render (FastAPI Web App)
+### Option A: Render (FastAPI Web App)
 This repository includes a native [`render.yaml`](render.yaml) blueprint:
 1. Link your GitHub repo to **[render.com](https://render.com)**.
 2. Select **"Blueprint"** deployment; Render reads `render.yaml` and deploys automatically.
+
+### Option B: Railway
+1. Create a new project on **[railway.app](https://railway.app)** from this GitHub repo.
+2. Railway will automatically detect the `Procfile` / `Dockerfile` and start the server.
 
 ### Option C: Docker Container
 ```bash
@@ -239,7 +228,6 @@ The legal template generator operates **without LLMs or external APIs** using de
 │   ├── test_scraper.py            # Unit tests for scraper & parser
 │   ├── test_drafting.py           # Unit tests for legal draft engine
 │   └── test_api.py                # Integration tests for FastAPI endpoints
-├── streamlit_app.py               # Complete Streamlit cloud application
 ├── run.py                         # Local server runner script
 ├── requirements.txt               # Python project dependencies
 ├── pytest.ini                     # Pytest configuration

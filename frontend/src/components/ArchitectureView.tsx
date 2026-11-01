@@ -90,7 +90,7 @@ export const ArchitectureView: React.FC = () => {
           </CardHeader>
           <CardContent className="text-xs space-y-2 text-zinc-600 dark:text-zinc-400 leading-relaxed">
             <p>
-              The National Informatics Centre (NIC) firewall frequently blocks or throttles foreign cloud hosting IPs (Render, Railway, AWS US-East, Streamlit Cloud).
+              The National Informatics Centre (NIC) firewall frequently blocks or throttles foreign cloud hosting IPs (Render, Railway, AWS US-East).
             </p>
             <p>
               <strong className="text-zinc-900 dark:text-zinc-100">Implementation:</strong> The scraper queries the live eCourts portal first. If the NIC firewall times out or blocks the request with HTTP 403, the system seamlessly activates a verified genuine snapshot for reference cases, ensuring 100% demo reliability.
