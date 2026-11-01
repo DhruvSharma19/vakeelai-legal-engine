@@ -221,7 +221,6 @@ The legal template generator operates **without LLMs or external APIs** using de
 │       ├── num_to_words.py        # Indian currency & numbers to words converter
 │       └── templates/             # Specialized rule-based legal templates
 ├── tests/
-│   ├── capture_visuals.py         # Playwright visual regression suite
 │   ├── screenshots/               # Verified UI screenshots
 │   ├── test_scraper.py            # Unit tests for scraper & parser
 │   ├── test_drafting.py           # Unit tests for legal draft engine
