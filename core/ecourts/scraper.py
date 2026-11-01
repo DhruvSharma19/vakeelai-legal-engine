@@ -113,22 +113,25 @@ class DistrictCourtScraper:
                 client.app_token = res["app_token"]
 
         # Automated OCR loop with auto-retry
-        for attempt in range(max_ocr_retries):
-            img_bytes, _, _ = client.fetch_captcha_image_and_audio()
-            if not img_bytes:
-                break
+        try:
+            for attempt in range(max_ocr_retries):
+                img_bytes, _, _ = client.fetch_captcha_image_and_audio()
+                if not img_bytes:
+                    break
 
-            predicted_captcha = self.captcha_mgr.solve(img_bytes)
-            if not predicted_captcha:
-                continue
+                predicted_captcha = self.captcha_mgr.solve(img_bytes)
+                if not predicted_captcha:
+                    continue
 
-            res = client.search_by_cnr(clean_cnr, predicted_captcha)
-            if res.get("status") == 1 and res.get("casetype_list"):
-                return ECourtsParser.parse_comprehensive_case(res["casetype_list"], clean_cnr)
+                res = client.search_by_cnr(clean_cnr, predicted_captcha)
+                if res.get("status") == 1 and res.get("casetype_list"):
+                    return ECourtsParser.parse_comprehensive_case(res["casetype_list"], clean_cnr)
 
-            # Update token and image URL if returned in error payload
-            if res.get("app_token"):
-                client.app_token = res["app_token"]
+                # Update token and image URL if returned in error payload
+                if res.get("app_token"):
+                    client.app_token = res["app_token"]
+        except Exception as net_err:
+            logger.warning("Network error during CNR query: %s", net_err)
 
         # If live scrape failed after retries, check offline resilience dataset
         if allow_fallback:
@@ -166,43 +169,47 @@ class DistrictCourtScraper:
                     return SAMPLE_CASE_SUMMARIES, fallback
             raise ConnectionError("Failed to establish session with eCourts portal.")
 
-        # Establish prerequisite cascades
-        client.fill_district(state_code)
-        client.fill_complex(state_code, dist_code)
-        client.fill_establishment(state_code, dist_code, court_complex_code)
-        client.fill_case_type(state_code, dist_code, court_complex_code, est_code)
-
-        def attempt_submit(captcha_val: str):
-            return client.search_by_case_number(
-                state_code=state_code,
-                dist_code=dist_code,
-                court_complex_code=court_complex_code,
-                est_code=est_code,
-                case_type=case_type,
-                case_no=case_no,
-                year=year,
-                captcha_code=captcha_val,
-            )
-
+        # Establish prerequisite cascades and attempt query
         search_res = None
-        if user_captcha:
-            search_res = attempt_submit(user_captcha)
-            if not search_res or search_res.get("status") != 1:
-                search_res = None
+        try:
+            client.fill_district(state_code)
+            client.fill_complex(state_code, dist_code)
+            client.fill_establishment(state_code, dist_code, court_complex_code)
+            client.fill_case_type(state_code, dist_code, court_complex_code, est_code)
 
-        if not search_res:
-            for attempt in range(max_ocr_retries):
-                img_bytes, _, _ = client.fetch_captcha_image_and_audio(force_refresh=True)
-                if not img_bytes:
-                    break
-                predicted_cap = self.captcha_mgr.solve(img_bytes)
-                if not predicted_cap:
-                    continue
+            def attempt_submit(captcha_val: str):
+                return client.search_by_case_number(
+                    state_code=state_code,
+                    dist_code=dist_code,
+                    court_complex_code=court_complex_code,
+                    est_code=est_code,
+                    case_type=case_type,
+                    case_no=case_no,
+                    year=year,
+                    captcha_code=captcha_val,
+                )
 
-                res = attempt_submit(predicted_cap)
-                if res.get("status") == 1 and res.get("case_data"):
-                    search_res = res
-                    break
+            if user_captcha:
+                search_res = attempt_submit(user_captcha)
+                if not search_res or search_res.get("status") != 1:
+                    search_res = None
+
+            if not search_res:
+                for attempt in range(max_ocr_retries):
+                    img_bytes, _, _ = client.fetch_captcha_image_and_audio(force_refresh=True)
+                    if not img_bytes:
+                        break
+                    predicted_cap = self.captcha_mgr.solve(img_bytes)
+                    if not predicted_cap:
+                        continue
+
+                    res = attempt_submit(predicted_cap)
+                    if res.get("status") == 1 and res.get("case_data"):
+                        search_res = res
+                        break
+        except Exception as net_err:
+            logger.warning("Network or portal error during case number lookup: %s", net_err)
+            search_res = None
 
         if not search_res or search_res.get("status") != 1:
             if allow_fallback:

@@ -122,8 +122,6 @@ pip install -r requirements.txt
 
 ### 2. Run the Application Server
 ```bash
-python run.py
-# Or directly with uvicorn:
 uvicorn app.main:app --reload --port 8000
 ```
 Open **[http://localhost:8000](http://localhost:8000)** in your browser.  
@@ -228,7 +226,6 @@ The legal template generator operates **without LLMs or external APIs** using de
 │   ├── test_scraper.py            # Unit tests for scraper & parser
 │   ├── test_drafting.py           # Unit tests for legal draft engine
 │   └── test_api.py                # Integration tests for FastAPI endpoints
-├── run.py                         # Local server runner script
 ├── requirements.txt               # Python project dependencies
 ├── pytest.ini                     # Pytest configuration
 ├── Dockerfile                     # Production container configuration
